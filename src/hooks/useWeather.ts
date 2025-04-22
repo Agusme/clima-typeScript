@@ -59,7 +59,7 @@ const [notFound, setNotFound]= useState(false);
     setLoading(true);
     setWeather(initialState);
     try {
-      const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appID}`;
+      const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appID}`;
       const { data } = await axios.get(geoUrl);
       if (!data[0]) {
         setNotFound(true)
